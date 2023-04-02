@@ -1,5 +1,3 @@
-package toys_shop;
-
 public class Toy {
     private final int id;
     private final String name;
