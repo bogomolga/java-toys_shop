@@ -106,30 +106,6 @@ public class Ui {
         }
     }
 
-    static void showPrizeToys() throws FileNotFoundException {
-        File file = new File("src/main/java/toys_shop/prizeToys.txt");
-        Scanner scanner = new Scanner(file);
-        System.out.println("Призовые игрушки записаны в файл: " + file);
-        System.out.println("Призовые игрушки:");
-
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            String[] data = line.split(";");
-
-            int id = Integer.parseInt(data[0]);
-            String name = data[1];
-            int quantity = Integer.parseInt(data[2]);
-            int weight = Integer.parseInt(data[3]);
-
-            System.out.println("ID: " + id);
-            System.out.println("Название: " + name);
-            System.out.println("Количество: " + quantity);
-            System.out.println("Вес: " + weight + " %");
-            System.out.println();
-        }
-
-        scanner.close();
-    }
 
 /*    private void showPrizeToys2() {
         // Создаем объект JSON из файла
