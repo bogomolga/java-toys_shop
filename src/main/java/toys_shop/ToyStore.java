@@ -83,5 +83,26 @@ public class ToyStore {
     }
     public static void main(String[] args) throws FileNotFoundException {
 
+        try {
+            FileWriter writer = new FileWriter("src/main/java/toys_shop/prizeToys.txt");
+            writer.write("");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Произошла ошибка при очистке файла: " + e.getMessage());
+        }
+
+        ToyStore toyStore = new ToyStore();
+        Ui ui = new Ui(toyStore);
+        toyStore.addToy(1, "Мишка", 10, 10);
+        toyStore.addToy(2, "Кубик", 70, 1);
+        toyStore.addToy(3, "Барби", 20, 6);
+        toyStore.addToy(4, "Слоник", 22, 3);
+        toyStore.addToy(5, "Конструктор", 68, 30);
+        toyStore.addToy(6, "Самолет", 14, 20);
+        toyStore.addToy(7, "Мячик", 55, 4);
+        toyStore.addToy(8, "Железная дорога", 17, 35);
+        toyStore.addToy(9, "Пистолет", 43, 11);
+        toyStore.addToy(10, "Машинка", 150, 15);
+        Ui.start();
     }
 }
